@@ -1,0 +1,56 @@
+
+<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" style="width:100%">
+    <table class="table table-hover table-striped table-bordered">
+        <tr>
+            <td>
+                <center>文件名</center>
+            </td>
+            <td class="hidden-xs">
+                <center>文件大小</center>
+            </td>
+            <td class="hidden-sm hidden-xs">
+                <center>修改时间</center>
+            </td>
+            <td colspan="4">
+                <center>操作</center>
+            </td>
+        </tr>
+        <volist name="folder" id="vo">
+            <tr>
+                <td>
+                    <i class="glyphicon glyphicon-folder-open"></i>
+                    <a href="#" onclick="folder_click('{$vo.folder_name}','Yun/index/parent_id/{$vo.id}')">&nbsp&nbsp{$vo.folder_name}</a>
+                </td>
+                <td class="hidden-xs">
+                    <center></center>
+                </td>
+                <td class="hidden-sm hidden-xs">
+                    <center>{$vo.create_time}</center>
+                </td>
+                <td>
+                    <center><a data-toggle="modal" href="#delete">删除</a></center>
+                </td>
+            </tr>
+        </volist>
+        <volist name="file" id="vo">
+            <tr>
+                <td>{$vo.file_name}</td>
+                <td class="hidden-xs">
+                    <center>{$vo.file_size}</center>
+                </td>
+                <td class="hidden-sm hidden-xs">
+                    <center>{$vo.create_time}</center>
+                </td>
+                <td>
+                    <center><a href="__APP__/Download?id={$vo.id}">下载</a></center>
+                </td>
+                <td>
+                    <center><a data-toggle="modal" href="#delete">共享</a></center>
+                </td>
+                <td>
+                    <center><a data-toggle="modal" href="#delete">删除</a></center>
+                </td>
+            </tr>
+        </volist>
+    </table>
+</div>

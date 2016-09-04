@@ -1,0 +1,410 @@
+[ 2016-08-27T09:41:16+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001440s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001280s ]
+
+[ 2016-08-27T09:41:20+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e501777bb89ee37cb4b31f10b53fbf91' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2016-08-27T09:41:29+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-08-27T09:44:23+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000897s ]
+
+[ 2016-08-27T10:01:33+08:00 ] ::1 /YunPan/index.php/Home
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== %s )' at line 1
+ [ SQL语句 ] : SELECT * FROM `pan_func` WHERE ( parent == %s ) 
+
+[ 2016-08-27T10:01:49+08:00 ] ::1 /YunPan/index.php/Home
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `pan_func` WHERE ( parent == 0 ) 
+
+[ 2016-08-27T10:01:52+08:00 ] ::1 /YunPan/index.php/Home
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `pan_func` WHERE ( parent == 0 ) 
+
+[ 2016-08-27T10:02:26+08:00 ] ::1 /YunPan/index.php/Home
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0' )' at line 1
+ [ SQL语句 ] : SELECT * FROM `pan_func` WHERE ( parent == '0' ) 
+
+[ 2016-08-27T10:02:49+08:00 ] ::1 /YunPan/index.php/Home
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `pan_func` WHERE ( parent == 0 ) 
+
+[ 2016-08-27T10:45:54+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2016-08-27T15:38:37+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001510s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001062s ]
+
+[ 2016-08-27T15:48:15+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002225s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = '773079f77569c67fdf2d983702d10a27' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2016-08-27T15:48:18+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002042s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2016-08-27T15:53:36+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001330s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2016-08-27T15:53:45+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2016-08-27T15:53:56+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001456s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2016-08-27T15:54:33+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002959s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2016-08-27T15:54:39+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'aa645e6834b6487303ea95334f5724d4' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2016-08-27T15:54:44+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = '773079f77569c67fdf2d983702d10a27' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000836s ]
+
+[ 2016-08-27T15:54:52+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002439s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001933s ]
+
+[ 2016-08-27T15:56:34+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2016-08-27T16:23:50+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2016-08-27T16:23:55+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000782s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-08-27T16:49:13+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2016-08-27T16:49:18+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'aaa42296669b958c3cee6c0475c8093e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2016-08-27T16:49:21+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2016-08-27T19:39:20+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002256s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = '39130498a3028a749831f299ff1e052b' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-08-27T19:39:27+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2016-08-27T19:48:02+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'ca8ddf11ba0b206457e960ef2a44de53' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000883s ]
+
+[ 2016-08-27T19:48:13+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = '83a61aca77d1b801ee780df3b7e6037f' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000866s ]
+
+[ 2016-08-27T19:48:16+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'ba99a5a9425f33003e26f2899935411f' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2016-08-27T19:48:19+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'dc998ae976f79073c8f40fd9a7dc633c' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2016-08-27T19:48:31+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'dc998ae976f79073c8f40fd9a7dc633c' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2016-08-27T19:48:45+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = '1f13ded831fd529eac5fe855f18f2903' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-08-27T19:48:51+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001196s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000771s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000822s ]
+
+[ 2016-08-27T20:05:28+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001052s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2016-08-27T20:05:51+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-08-27T20:06:06+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-08-27T20:07:33+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-08-27T20:11:03+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-08-27T20:59:14+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2016-08-27T21:25:06+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-08-27T22:50:09+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-08-27T22:58:28+08:00 ] ::1 /YunPan/index.php/Home/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
