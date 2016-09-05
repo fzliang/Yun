@@ -11,18 +11,19 @@ class LoginController extends Controller {
 		$uname  = I('post.username');
 		$psword = md5(I('post.password'));
 		$User   = M('user');
-		$result = $User->where("username = '%s' AND password = '%s'", $uname, $psword)->find();
+		$result = $User->where("username = '%s' AND password = '%s' AND levels = '2'", $uname, $psword)->find();
 		if (!$result) {
 			echo "登录失败";
 		} else {
 			session('uname', $result['username']);
 			session('uid', $result['id']);
+			session('client', 'teacher');
 			echo "登陆成功";
 		}
 	}
 
 	public function logout() {
 		session(null);
-		$this->redirect('/Home/Login');
+		$this->redirect('/Teacher/Login');
 	}
 }

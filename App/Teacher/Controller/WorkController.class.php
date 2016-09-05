@@ -26,4 +26,8 @@ class WorkController extends CommonController {
 		
 		$this->show("low_quality");
 	}
+
+	public function create_work() {
+		
+	}
 } 

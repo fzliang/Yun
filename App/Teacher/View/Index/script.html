@@ -1,14 +1,14 @@
 <script type="text/javascript">
     function menu_click(addr) {
         $('.breadcrumb').children('').remove();
-        url = "__APP__/Home/" + addr;
+        url = "__APP__/Teacher/" + addr;
         $.get(url, function(data, textStatus, xhr) {
             $('.content').html(data);
         });
     }
 
     function folder_click(name, addr) {
-        url = "__APP__/Home/" + addr;
+        url = "__APP__/Teacher/" + addr;
         $.get(url, function(data, textStatus, xhr) {
             $('.content').html(data);
         });
@@ -23,12 +23,11 @@
     }
 
     function clickbread(addr) {
-        url = "__APP__/Home/" + addr;
+        url = "__APP__/Teacher/" + addr;
         $.get(url, function(data, textStatus, xhr) {
             $('.content').html(data);
         });
         addr1 = "folder" + addr.slice(20);
-        console.log(addr1);
         $('#' + addr1).parent().nextAll().remove();
     }
 
@@ -48,7 +47,7 @@
          */
         $.ajax({
             type: "POST",
-            url: "__APP__/Home/Upload/file",
+            url: "__APP__/Teacher/Upload/file",
             data: formData,
             dataType: "html",
             processData: false,

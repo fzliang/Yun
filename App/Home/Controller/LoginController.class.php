@@ -17,6 +17,7 @@ class LoginController extends Controller {
 		} else {
 			session('uname', $result['username']);
 			session('uid', $result['id']);
+			session('client', 'student');
 			echo "登陆成功";
 		}
 	}

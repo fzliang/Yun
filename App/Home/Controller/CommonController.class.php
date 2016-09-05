@@ -9,7 +9,9 @@ class CommonController extends Controller {
 		
 		if(empty($uid)||empty($uname)){
 			$this->redirect('/Home/Login');
-		}else{
+		}else if (session('client') != 'student'){
+			$this->redirect('/Home/Login');	
+		} else {
     		$this->assign('uname', $uname);
 		}
 	}

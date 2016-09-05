@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
     <head>
         <title>云盘登录</title>
-        <link rel="stylesheet" href="__PUBLIC__/login/css/style.css" />
-        <script src="__PUBLIC__/jquery/jquery.js"></script>
-        <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-        <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <script type='text/javascript' src='__PUBLIC__/login/js/jquery.particleground.min.js'></script>
-        <script type='text/javascript' src='__PUBLIC__/login/js/demo.js'></script>
+        <link rel="stylesheet" href="/YunPan/Public/login/css/style.css" />
+        <script src="/YunPan/Public/jquery/jquery.js"></script>
+        <script src="/YunPan/Public/bootstrap/js/bootstrap.min.js"></script>
+        <link href="/YunPan/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script type='text/javascript' src='/YunPan/Public/login/js/jquery.particleground.min.js'></script>
+        <script type='text/javascript' src='/YunPan/Public/login/js/demo.js'></script>
     </head>
     <body>
         <div id="particles">
@@ -44,9 +44,9 @@
                     'password' : $(':password').val()
                 }
                 
-                $.post('__APP__/Teacher/Login/check', data, function(data, textStatus) {
+                $.post('/YunPan/index.php/Teacher/Login/check', data, function(data, textStatus) {
                     if (data == "登陆成功" && textStatus == "success") {
-                        window.location.href = "__APP__/Teacher";
+                        window.location.href = "/YunPan/index.php/Teacher";
                     } else {
                         alert (data);
                     }             

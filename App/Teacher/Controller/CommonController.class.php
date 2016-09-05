@@ -8,8 +8,10 @@ class CommonController extends Controller {
 		$uname = session('uname');
 		
 		if(empty($uid)||empty($uname)){
-			$this->redirect('/Home/Login');
-		}else{
+			$this->redirect('/Teacher/Login');
+		} else if (session('client') != 'teacher') {
+			$this->redirect('/Teacher/Login');
+		} else {
     		$this->assign('uname', $uname);
 		}
 	}
