@@ -1,0 +1,10 @@
+[ 2016-09-07T20:49:31+08:00 ] ::1 /YunPan/index.php/Teacher/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'admin' AND password = 'e10adc3949ba59abbe56e057f20f883e' AND levels = '2' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+

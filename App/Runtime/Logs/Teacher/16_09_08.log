@@ -1,0 +1,671 @@
+[ 2016-09-08T20:31:51+08:00 ] ::1 /YunPan/index.php/Teacher/Login/check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001388s ]
+SQL: SHOW COLUMNS FROM `pan_user` [ RunTime:0.2332s ]
+SQL: SELECT * FROM `pan_user` WHERE ( username = 'teacher' AND password = 'e10adc3949ba59abbe56e057f20f883e' AND levels = '2' ) LIMIT 1   [ RunTime:0.0645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2016-09-08T21:04:09+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002149s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2016-09-08T21:06:27+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0227s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2016-09-08T21:06:28+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2016-09-08T21:06:29+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001232s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2016-09-08T21:06:31+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005897s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2016-09-08T21:06:32+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2016-09-08T21:06:33+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0042s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2016-09-08T21:06:34+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2016-09-08T21:19:03+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001653s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined variable: folder D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 20 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2016-09-08T21:20:19+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] Undefined variable: folder D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2016-09-08T21:26:21+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002400s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: folder D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001106s ]
+
+[ 2016-09-08T21:26:42+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002095s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.1184s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined variable: folder D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 20 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2016-09-08T21:28:24+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined variable: folder D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 20 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011429s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011522s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2016-09-08T21:29:06+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000950s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-09-08T21:29:24+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001435s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2016-09-08T21:29:25+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001331s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2016-09-08T21:29:25+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001821s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004042s ]
+
+[ 2016-09-08T21:29:28+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `pan_work` WHERE ( id = 2 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000999s ]
+
+[ 2016-09-08T21:30:11+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001940s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001468s ]
+
+[ 2016-09-08T21:30:48+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001824s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001281s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2016-09-08T21:31:36+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001559s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008222s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001611s ]
+
+[ 2016-09-08T21:31:52+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001867s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2016-09-08T21:33:38+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003649s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2016-09-08T21:33:51+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001024s ]
+
+[ 2016-09-08T22:04:27+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001584s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2016-09-08T22:04:46+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2016-09-08T22:09:30+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001770s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: create_time D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-09-08T22:10:21+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-08T22:10:28+08:00 ] ::1 /YunPan/index.php/Teacher/work
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001450s ]
+SQL: SHOW COLUMNS FROM `pan_work` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `pan_work` WHERE ( teacher_id = 2 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined index: create_time D:\Workspace\YunPan\App\Runtime\Cache\Teacher\bbba3e3f46773da9400cd334101efc3c.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2016-09-08T22:21:55+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0235s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0350s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000782s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2016-09-08T22:30:08+08:00 ] ::1 /YunPan/index.php/Teacher/Upload/file
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\Workspace\YunPan\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `pan_file_root` [ RunTime:0.0832s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0010s ]
+SQL: INSERT INTO `pan_file_root` (`file_name`,`save_name`,`save_path`,`file_size`,`file_ext`,`file_mime`) VALUES ('372.70-notebook-win10-64bit-international-whql.exe','57d175e70feb1.exe','2/','368602736','exe','application/x-msdownload') [ RunTime:0.7570s ]
+SQL: INSERT INTO `pan_file` (`user_id`,`file_id`,`folder_id`,`file_name`,`file_size`,`mime`) VALUES ('2','160','0','372.70-notebook-win10-64bit-international-whql.exe','368602736','application/x-msdownload') [ RunTime:0.1342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2016-09-08T22:31:04+08:00 ] ::1 /YunPan/index.php/Teacher/Upload/file
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001409s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\Workspace\YunPan\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `pan_file_root` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0008s ]
+SQL: INSERT INTO `pan_file_root` (`file_name`,`save_name`,`save_path`,`file_size`,`file_ext`,`file_mime`) VALUES ('372.70-notebook-win10-64bit-international-whql.exe','57d176255de15.exe','2/','368602736','exe','application/x-msdownload') [ RunTime:0.3492s ]
+SQL: INSERT INTO `pan_file` (`user_id`,`file_id`,`folder_id`,`file_name`,`file_size`,`mime`) VALUES ('2','161','0','372.70-notebook-win10-64bit-international-whql.exe','368602736','application/x-msdownload') [ RunTime:0.1265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001738s ]
+
+[ 2016-09-08T22:31:38+08:00 ] ::1 /YunPan/index.php/Teacher/Upload/file
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001278s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\Workspace\YunPan\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `pan_file_root` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0009s ]
+SQL: INSERT INTO `pan_file_root` (`file_name`,`save_name`,`save_path`,`file_size`,`file_ext`,`file_mime`) VALUES ('372.70-notebook-win10-64bit-international-whql.exe','57d176475d874.exe','2/','368602736','exe','application/x-msdownload') [ RunTime:0.4641s ]
+SQL: INSERT INTO `pan_file` (`user_id`,`file_id`,`folder_id`,`file_name`,`file_size`,`mime`) VALUES ('2','162','0','372.70-notebook-win10-64bit-international-whql.exe','368602736','application/x-msdownload') [ RunTime:0.0975s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2016-09-08T22:32:38+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001228s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001276s ]
+
+[ 2016-09-08T22:32:39+08:00 ] ::1 /YunPan/index.php/Teacher/yun
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `pan_file_folder` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND parent_id = 0 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `pan_file` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `pan_file` WHERE ( user_id = 2 AND folder_id = 0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `pan_file_folder` WHERE ( user_id = 2 AND id = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001252s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001312s ]
+

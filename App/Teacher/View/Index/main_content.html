@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <button class="btn btn-success" onclick="upload()">上传文件</button>
-        <button class="btn btn-info">发布作业</button>
+        <button class="btn btn-info" onclick="new_work() ">发布作业</button>
     </section>
     <ol class="breadcrumb">
     </ol>
@@ -20,8 +20,47 @@
                 <button data-dismiss="modal" class="close" type="button">&times;</button>
                 <h9>上传文件</h9>
             </div>
-            <div class="upload modal-body">
-                <p>想找回密码是吧?然而这并没有什么卵用,忘记密码的话请联系工作人员</p>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="new_work" class="modal fade">
+    <div class="upload modal-dialog">
+        <div class="upload modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h9>新建作业项目</h9>
+            </div>
+            <div class="modal-body">
+                <form action="main_content_submit" method="get" accept-charset="utf-8">
+                    <center>
+                        <p>
+                            <span>作业名称：</span>
+                            <input type="text" name="work_name">
+                        </p>
+                        <p>
+                            <span>课程名称：</span>
+                            <input type="text" name="lesson_name">
+                        </p>
+                        <p>
+                            <span>选择班级：</span>
+                            <input type="text" name="class">
+                        </p>
+                        <p>
+                            <span>开始时间：</span>
+                            <input type="date" name="create_time">
+                        </p>
+                        <p>
+                            <span>结束时间：</span>
+                            <input type="date" name="create_time">
+                        </p>
+                        <p>
+                            <input type="reset" value="重置">
+                            <input type="submit" value="确认">
+                        </p>
+                    </center>
+                </form>
             </div>
         </div>
     </div>

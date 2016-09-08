@@ -18,8 +18,6 @@ class YunController extends CommonController {
 	}
 
 	public function picture() {
-		//$files = M('file')->where("user_id = %s AND mime like 'image/%'", session('uid'))->select();
-
 		$map['mime'] = array('like', 'image/%');
 		$map['user_id'] = array('eq', session('uid'));
 
@@ -31,8 +29,6 @@ class YunController extends CommonController {
 	}
 
 	public function music() {
-		//$files = M('file')->where("user_id = %s AND mime like 'audio/%'", session('uid'))->select();
-
 		$map['mime'] = array('like', 'audio/%');
 		$map['user_id'] = array('eq', session('uid'));
 
@@ -44,8 +40,6 @@ class YunController extends CommonController {
 	}
 
 	public function video() {
-		//$files = M('file')->where("user_id = %s AND mime like 'video/%'", session('uid'))->select();
-
 		$map['mime'] = array('like', 'video/%');
 		$map['user_id'] = array('eq', session('uid'));
 
@@ -57,8 +51,6 @@ class YunController extends CommonController {
 	}
 
 	public function document() {
-		//$files = M('file')->where("user_id = %s AND mime like 'text/%'", session('uid'))->select();
-
 		$map['mime'] = array('like', 'text/%');
 		$map['user_id'] = array('eq', session('uid'));
 

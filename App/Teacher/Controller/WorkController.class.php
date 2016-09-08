@@ -3,9 +3,12 @@ namespace Teacher\Controller;
 
 class WorkController extends CommonController {
 	public function index() {
+		$teacher_id = session('uid');
 
+		$works = M('work')->where("teacher_id = %s", $teacher_id)->select();
 
-		$this->show("work");
+		$this->assign('works',$works);
+		$this->display();
 	}
 
 

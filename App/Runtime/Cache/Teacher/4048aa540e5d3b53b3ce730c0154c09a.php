@@ -222,7 +222,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <button class="btn btn-success" onclick="upload()">上传文件</button>
-        <button class="btn btn-info">发布作业</button>
+        <button class="btn btn-info" onclick="new_work() ">发布作业</button>
     </section>
     <ol class="breadcrumb">
     </ol>
@@ -240,8 +240,42 @@
                 <button data-dismiss="modal" class="close" type="button">&times;</button>
                 <h9>上传文件</h9>
             </div>
-            <div class="upload modal-body">
-                <p>想找回密码是吧?然而这并没有什么卵用,忘记密码的话请联系工作人员</p>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="new_work" class="modal fade">
+    <div class="upload modal-dialog">
+        <div class="upload modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h9>新建作业项目</h9>
+            </div>
+            <div class="modal-body">
+                <form action="main_content_submit" method="get" accept-charset="utf-8">
+    
+                <center>
+                    <p><span>作业名称：</span>
+                        <input type="text" name="work_name">
+                    </p>
+                    <p><span>课程名称：</span>
+                        <input type="text" name="lesson_name">
+                    </p>
+                    <p><span>选择班级：</span>
+                        <input type="text" name="class">
+                    </p>
+                    <p><span>开始时间：</span>
+                        <input type="date" name="create_time">
+                    </p>
+                    <p><span>结束时间：</span>
+                        <input type="date" name="create_time">
+                    </p>
+                    <p>
+                        <input type="reset" value="重置"><input type="submit" value="确认">
+                    </p>      
+                </center>
+                </form>
             </div>
         </div>
     </div>
@@ -358,8 +392,8 @@
         $.get(url, function(data, textStatus, xhr) {
             $('.content').html(data);
         });
+        
         addr1 = "folder" + addr.slice(20);
-        console.log(addr1);
         $('#' + addr1).parent().nextAll().remove();
     }
 
@@ -373,17 +407,12 @@
 
         $('.upload.menu').append(a);
 
-        /**   
-         * 必须false才会避开jQuery对 formdata 的默认处理   
-         * XMLHttpRequest会对 formdata 进行正确的处理   
-         */
         $.ajax({
             type: "POST",
             url: "/YunPan/index.php/Teacher/Upload/file",
             data: formData,
             dataType: "html",
             processData: false,
-            //必须false才会自动加上正确的Content-Type   
             contentType: false,
 
             success: function(msg, textStatus, xhr) {
@@ -403,13 +432,10 @@
             }
         });
         
-        /**
-         *    侦查附件上传情况    ,这个方法大概0.05-0.1秒执行一次
-         */
         function onprogress(evt) {
-            var loaded = evt.loaded; //已经上传大小情况 
-            var tot = evt.total; //附件总大小 
-            var per = Math.floor(100 * loaded / tot); //已经上传的百分比
+            var loaded = evt.loaded;
+            var tot = evt.total;
+            var per = Math.floor(100 * loaded / tot);
 
             var per = per + "%";
             $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);
@@ -423,8 +449,8 @@
     function upload() {
         id++;
         var file = "<input type='file' id='file" + id + "'/>";
-        var button = "<input type='button' value='上传图片' onclick='uploadFile(" + id + ")' />"
-        $('.upload.modal-body').html(file + button);
+        var button = "<input type='button' value='上传文件' onclick='uploadFile(" + id + ")' />"
+        $('#upload > div > div > div.modal-body').html(file + button);
         $('#upload').modal('show');
 
     }
@@ -437,6 +463,11 @@
         setTimeout(function() {
             upload_file(id, task);
         }, 1000);
+    }
+
+
+    function new_work() {
+        $('#new_work ').modal('show');
     }
 </script>
 

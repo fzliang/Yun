@@ -27,6 +27,7 @@
         $.get(url, function(data, textStatus, xhr) {
             $('.content').html(data);
         });
+        
         addr1 = "folder" + addr.slice(20);
         $('#' + addr1).parent().nextAll().remove();
     }
@@ -41,17 +42,12 @@
 
         $('.upload.menu').append(a);
 
-        /**   
-         * 必须false才会避开jQuery对 formdata 的默认处理   
-         * XMLHttpRequest会对 formdata 进行正确的处理   
-         */
         $.ajax({
             type: "POST",
             url: "__APP__/Teacher/Upload/file",
             data: formData,
             dataType: "html",
             processData: false,
-            //必须false才会自动加上正确的Content-Type   
             contentType: false,
 
             success: function(msg, textStatus, xhr) {
@@ -71,13 +67,10 @@
             }
         });
         
-        /**
-         *    侦查附件上传情况    ,这个方法大概0.05-0.1秒执行一次
-         */
         function onprogress(evt) {
-            var loaded = evt.loaded; //已经上传大小情况 
-            var tot = evt.total; //附件总大小 
-            var per = Math.floor(100 * loaded / tot); //已经上传的百分比
+            var loaded = evt.loaded;
+            var total = evt.total;
+            var per = Math.floor(100 * loaded / total);
 
             var per = per + "%";
             $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);
@@ -91,8 +84,8 @@
     function upload() {
         id++;
         var file = "<input type='file' id='file" + id + "'/>";
-        var button = "<input type='button' value='上传图片' onclick='uploadFile(" + id + ")' />"
-        $('.upload.modal-body').html(file + button);
+        var button = "<input type='button' value='上传文件' onclick='uploadFile(" + id + ")' />"
+        $('#upload > div > div > div.modal-body').html(file + button);
         $('#upload').modal('show');
 
     }
@@ -105,5 +98,10 @@
         setTimeout(function() {
             upload_file(id, task);
         }, 1000);
+    }
+
+
+    function new_work() {
+        $('#new_work ').modal('show');
     }
 </script>
