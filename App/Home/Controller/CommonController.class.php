@@ -12,6 +12,7 @@ class CommonController extends Controller {
 		}else if (session('client') != 'student'){
 			$this->redirect('/Home/Login');	
 		} else {
+			$this->assign('uid',$uid);
     		$this->assign('uname', $uname);
 		}
 	}

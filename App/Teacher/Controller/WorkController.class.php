@@ -30,7 +30,15 @@ class WorkController extends CommonController {
 		$this->show("low_quality");
 	}
 
-	public function create_work() {
-		
+	public function create() {
+
+		dump($_POST);
 	}
+
+	public function selectClass() {
+		$class =D('TeacherClass')->getClass(1);
+		$this->assign('class',$class);
+		$this->display();
+	}
+
 } 

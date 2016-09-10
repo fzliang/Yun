@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 
 <head>
     <meta charset="utf-8">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/YunPan/Public/AdminLTE/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="/YunPan/Public/AdminLTE/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/YunPan/Public/AdminLTE/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="/YunPan/Public/bootstrap-select/dist/css/bootstrap-select.min.css">
     <script src="/YunPan/Public/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
 </head>
 
@@ -253,28 +254,31 @@
                 <h9>新建作业项目</h9>
             </div>
             <div class="modal-body">
-                <form action="main_content_submit" method="get" accept-charset="utf-8">
-    
-                <center>
-                    <p><span>作业名称：</span>
-                        <input type="text" name="work_name">
-                    </p>
-                    <p><span>课程名称：</span>
-                        <input type="text" name="lesson_name">
-                    </p>
-                    <p><span>选择班级：</span>
-                        <input type="text" name="class">
-                    </p>
-                    <p><span>开始时间：</span>
-                        <input type="date" name="create_time">
-                    </p>
-                    <p><span>结束时间：</span>
-                        <input type="date" name="create_time">
+                <form method="get" accept-charset="utf-8">
+                    <p>
+                        <span>作业名称：</span>
+                        <input class="form-control" type="text" name="work_name">
                     </p>
                     <p>
-                        <input type="reset" value="重置"><input type="submit" value="确认">
-                    </p>      
-                </center>
+                        <span>课程名称：</span>
+                        <input class="form-control" type="text" name="lesson_name">
+                    </p>
+                    <p>
+                        <span>选择班级：</span>
+                        <div id="selectClass"></div>
+                    </p>
+                    <p>
+                        <span>开始时间：</span>
+                        <input class="form-control" type="date" name="create_time" value="<?php echo (date("Y-m-d",NOW_TIME)); ?>">
+                    </p>
+                    <p>
+                        <span>结束时间：</span>
+                        <input class="form-control" type="date" name="end_time" value="<?php echo (date("Y-m-d",NOW_TIME)); ?>">
+                    </p>
+                    <p>
+                        <input class="btn btn-default" type="reset" value="重置">
+                        <input class="btn btn-primary" type="button" id="create_work" value="确认">
+                    </p>
                 </form>
             </div>
         </div>
@@ -434,8 +438,8 @@
         
         function onprogress(evt) {
             var loaded = evt.loaded;
-            var tot = evt.total;
-            var per = Math.floor(100 * loaded / tot);
+            var total = evt.total;
+            var per = Math.floor(100 * loaded / total);
 
             var per = per + "%";
             $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);
@@ -462,13 +466,40 @@
         $('#upload').modal('hide');
         setTimeout(function() {
             upload_file(id, task);
-        }, 1000);
+        }, 50);
     }
 
 
     function new_work() {
         $('#new_work ').modal('show');
     }
+
+    $('#create_work').click(function(){
+        $('#new_work').modal('hide');
+
+        var date  = {
+            'workname' : $("input[name='work_name']").val(),
+            'lessonname' : $("input[name='lesson_name']").val(),
+            'class': $("select[name='class']").val(),
+            'create_time' : $("input[name='create_time']").val(),
+            'end_time' : $("input[name='end_time']").val()
+        }
+
+        var url = "/YunPan/index.php/Teacher/Work/create";
+
+        $.post(url, date, function(data, textStatus) {
+            
+            alert(data)
+        })
+
+    })
+
+    $(function(){ 
+        $.post("/YunPan/index.php/Teacher/Work/selectClass", {id :<?php echo ($uid); ?>}, function(data, textStatus) { 
+            $('#selectClass').html(data); 
+        });
+    }());
+
 </script>
 
     <!-- jQuery 2.2.3 -->
@@ -477,6 +508,8 @@
     <script src="/YunPan/Public/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/YunPan/Public/AdminLTE/dist/js/app.min.js"></script>
+    <script src="/YunPan/Public/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/YunPan/Public/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ class LoginController extends Controller {
 	public function check() {
 		$uname  = I('post.username');
 		$psword = md5(I('post.password'));
-		$User   = M('user');
+		$User   = M('stu_user');
 		$result = $User->where("username = '%s' AND password = '%s'", $uname, $psword)->find();
 		if (!$result) {
 			echo "登录失败";
