@@ -200,15 +200,15 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <!-- Optionally, you can add icons to the links -->
-            <?php if(is_array($menus)): foreach($menus as $key=>$vo): if($vo["parent"] == 0): if($vo["has_son"] == 0): ?><li><a href="#" onclick="menu_click('<?php echo ($vo["fun_addr"]); ?>')"><i class="<?php echo ($vo["icon"]); ?>"></i> <span><?php echo ($vo["fun_name"]); ?></span></a></li><?php endif; ?>
+            <?php if(is_array($menus)): foreach($menus as $key=>$vo): if($vo["parent"] == 0): if($vo["has_son"] == 0): ?><li><a href="#" onclick="menu_click('<?php echo ($vo["fun_name"]); ?>','<?php echo ($vo["fun_addr"]); ?>')"><i class="<?php echo ($vo["icon"]); ?>"></i> <span><?php echo ($vo["fun_name"]); ?></span></a></li><?php endif; ?>
                     <?php if($vo["has_son"] == 1): ?><li class="treeview">
-                            <a href="#" onclick="menu_click('<?php echo ($vo["fun_addr"]); ?>')"><i class="<?php echo ($vo["icon"]); ?>"></i> <span><?php echo ($vo["fun_name"]); ?></span>
+                            <a href="#" onclick="menu_click('<?php echo ($vo["fun_name"]); ?>','<?php echo ($vo["fun_addr"]); ?>')"><i class="<?php echo ($vo["icon"]); ?>"></i> <span><?php echo ($vo["fun_name"]); ?></span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                             <ul class="treeview-menu">
-                                <?php if(is_array($menus)): foreach($menus as $key=>$it): if(($it["parent"]) == $vo["id"]): ?><li><a href="#" onclick="menu_click('<?php echo ($it["fun_addr"]); ?>')"><i class="<?php echo ($it["icon"]); ?>"></i> <span><?php echo ($it["fun_name"]); ?></span></a></li><?php endif; endforeach; endif; ?>
+                                <?php if(is_array($menus)): foreach($menus as $key=>$it): if(($it["parent"]) == $vo["id"]): ?><li><a href="#" onclick="menu_click('<?php echo ($it["fun_name"]); ?>','<?php echo ($it["fun_addr"]); ?>')"><i class="<?php echo ($it["icon"]); ?>"></i> <span><?php echo ($it["fun_name"]); ?></span></a></li><?php endif; endforeach; endif; ?>
                             </ul>
                         </li><?php endif; endif; endforeach; endif; ?>
             </li>
@@ -261,7 +261,7 @@
                     </p>
                     <p>
                         <span>课程名称：</span>
-                        <input class="form-control" type="text" name="lesson_name">
+                        <div id="selectLesson"></div>
                     </p>
                     <p>
                         <span>选择班级：</span>
@@ -269,7 +269,7 @@
                     </p>
                     <p>
                         <span>开始时间：</span>
-                        <input class="form-control" type="date" name="create_time" value="<?php echo (date("Y-m-d",NOW_TIME)); ?>">
+                        <input class="form-control" type="date" name="start_time" value="<?php echo (date("Y-m-d",NOW_TIME)); ?>">
                     </p>
                     <p>
                         <span>结束时间：</span>
@@ -368,140 +368,138 @@
     <!-- ./wrapper -->
     <!-- REQUIRED JS SCRIPTS -->
     <script type="text/javascript">
-    function menu_click(addr) {
-        $('.breadcrumb').children('').remove();
-        url = "/YunPan/index.php/Teacher/" + addr;
-        $.get(url, function(data, textStatus, xhr) {
-            $('.content').html(data);
-        });
-    }
+$(function() {
+    $.post("/YunPan/index.php/Teacher/Work/selectClass", {}, function(data, textStatus) {
+        $('#selectClass').html(data);
+    });
+    
+    $.post("/YunPan/index.php/Teacher/Work/selectLesson", {}, function(data, textStatus) {
+        $('#selectLesson').html(data);
+    });
+}());
 
-    function folder_click(name, addr) {
-        url = "/YunPan/index.php/Teacher/" + addr;
-        $.get(url, function(data, textStatus, xhr) {
-            $('.content').html(data);
-        });
-        breadcrumb(name, addr);
-    }
+function menu_click(name, addr) {
+    $('.breadcrumb').children('').remove();
+    folder_click(name, addr);
+}
 
-    function breadcrumb(name, addr) {
-        $('.breadcrumb').append(function() {
-            addr1 = "folder" + addr.slice(20);
-            return '<li><a id="' + addr1 + '" href="#" onclick="clickbread(\'' + addr + '\')">' + name + '</a></li>';
-        });
-    }
+function folder_click(name, addr) {
+    url = "/YunPan/index.php/Teacher/" + addr;
+    $.get(url, function(data, textStatus, xhr) {
+        $('.content').html(data);
+    });
+    breadcrumb(name, addr);
+}
 
-    function clickbread(addr) {
-        url = "/YunPan/index.php/Teacher/" + addr;
-        $.get(url, function(data, textStatus, xhr) {
-            $('.content').html(data);
-        });
-        
+function breadcrumb(name, addr) {
+    $('.breadcrumb').append(function() {
         addr1 = "folder" + addr.slice(20);
-        $('#' + addr1).parent().nextAll().remove();
-    }
+        return '<li><a id="' + addr1 + '" href="#" onclick="clickbread(\'' + addr + '\')">' + name + '</a></li>';
+    });
+}
 
-    function upload_file(id) {
-        file = $("#file" + id).get(0).files[0];
-        var formData = new FormData();
-        formData.append("file", file);
-        per = "0%"
+function clickbread(addr) {
+    url = "/YunPan/index.php/Teacher/" + addr;
+    $.get(url, function(data, textStatus, xhr) {
+        $('.content').html(data);
+    });
 
-        var a = '<li id=task' + task + '><a href="#"><h3 id="task_name">' + file.name + '<small class="pull-right">' + per + '</small></h3><div class="progress xs"><div class="progress-bar progress-bar-aqua" style="width: ' + per + '" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">20% Complete</span></div></div></a></li>';
+    addr1 = "folder" + addr.slice(20);
+    $('#' + addr1).parent().nextAll().remove();
+}
 
-        $('.upload.menu').append(a);
+function upload_file(id) {
+    file = $("#file" + id).get(0).files[0];
+    var formData = new FormData();
+    formData.append("file", file);
+    per = "0%"
 
-        $.ajax({
-            type: "POST",
-            url: "/YunPan/index.php/Teacher/Upload/file",
-            data: formData,
-            dataType: "html",
-            processData: false,
-            contentType: false,
+    var a = '<li id=task' + task + '><a href="#"><h3 id="task_name">' + file.name + '<small class="pull-right">' + per + '</small></h3><div class="progress xs"><div class="progress-bar progress-bar-aqua" style="width: ' + per + '" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">20% Complete</span></div></div></a></li>';
 
-            success: function(msg, textStatus, xhr) {
-                alert(msg);
-            },
+    $('.upload.menu').append(a);
 
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert("上传失败！！！")
-            },
+    $.ajax({
+        type: "POST",
+        url: "/YunPan/index.php/Teacher/Upload/file",
+        data: formData,
+        dataType: "html",
+        processData: false,
+        contentType: false,
 
-            xhr: function() {
-                var xhr = $.ajaxSettings.xhr();
-                if (onprogress && xhr.upload) {
-                    xhr.upload.addEventListener("progress", onprogress, false);
-                    return xhr;
-                }
+        success: function(msg, textStatus, xhr) {
+            alert(msg);
+        },
+
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("上传失败！！！")
+        },
+
+        xhr: function() {
+            var xhr = $.ajaxSettings.xhr();
+            if (onprogress && xhr.upload) {
+                xhr.upload.addEventListener("progress", onprogress, false);
+                return xhr;
             }
-        });
-        
-        function onprogress(evt) {
-            var loaded = evt.loaded;
-            var total = evt.total;
-            var per = Math.floor(100 * loaded / total);
-
-            var per = per + "%";
-            $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);
-            $("#task" + id + " > a > small.pull-right").text(per);
-            $("#task" + id + " > a > #task_name").html(file.name + "<small class='pull-right'>" + per + "</small>");
         }
+    });
+
+    function onprogress(evt) {
+        var loaded = evt.loaded;
+        var total = evt.total;
+        var per = Math.floor(100 * loaded / total);
+
+        var per = per + "%";
+        $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);
+        $("#task" + id + " > a > small.pull-right").text(per);
+        $("#task" + id + " > a > #task_name").html(file.name + "<small class='pull-right'>" + per + "</small>");
+    }
+}
+
+var id = 0;
+
+function upload() {
+    id++;
+    var file = "<input type='file' id='file" + id + "'/>";
+    var button = "<input type='button' value='上传文件' onclick='uploadFile(" + id + ")' />"
+    $('#upload > div > div > div.modal-body').html(file + button);
+    $('#upload').modal('show');
+
+}
+
+var task = 0;
+
+function uploadFile(id) {
+    task++;
+    $('#upload').modal('hide');
+    setTimeout(function() {
+        upload_file(id, task);
+    }, 50);
+}
+
+
+function new_work() {
+    $('#new_work ').modal('show');
+}
+
+$('#create_work').click(function() {
+    $('#new_work').modal('hide');
+
+    var date = {
+        'workname': $("input[name='work_name']").val(),
+        'lesson': $("select[name='lesson']").val(),
+        'class': $("select[name='class']").val(),
+        'start_time': $("input[name='start_time']").val(),
+        'end_time': $("input[name='end_time']").val()
     }
 
-    var id = 0;
+    var url = "/YunPan/index.php/Teacher/Work/create";
+    $.post(url, date, function(data, textStatus) {
 
-    function upload() {
-        id++;
-        var file = "<input type='file' id='file" + id + "'/>";
-        var button = "<input type='button' value='上传文件' onclick='uploadFile(" + id + ")' />"
-        $('#upload > div > div > div.modal-body').html(file + button);
-        $('#upload').modal('show');
-
-    }
-
-    var task = 0;
-
-    function uploadFile(id) {
-        task++;
-        $('#upload').modal('hide');
-        setTimeout(function() {
-            upload_file(id, task);
-        }, 50);
-    }
-
-
-    function new_work() {
-        $('#new_work ').modal('show');
-    }
-
-    $('#create_work').click(function(){
-        $('#new_work').modal('hide');
-
-        var date  = {
-            'workname' : $("input[name='work_name']").val(),
-            'lessonname' : $("input[name='lesson_name']").val(),
-            'class': $("select[name='class']").val(),
-            'create_time' : $("input[name='create_time']").val(),
-            'end_time' : $("input[name='end_time']").val()
-        }
-
-        var url = "/YunPan/index.php/Teacher/Work/create";
-
-        $.post(url, date, function(data, textStatus) {
-            
-            alert(data)
-        })
-
+        alert(data)
     })
 
-    $(function(){ 
-        $.post("/YunPan/index.php/Teacher/Work/selectClass", {id :<?php echo ($uid); ?>}, function(data, textStatus) { 
-            $('#selectClass').html(data); 
-        });
-    }());
-
+})
 </script>
-
     <!-- jQuery 2.2.3 -->
     
     <!-- Bootstrap 3.3.6 -->

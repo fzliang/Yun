@@ -29,11 +29,11 @@
             <foreach name="menus" item="vo">
                 <if condition="$vo.parent eq 0">
                     <if condition="$vo.has_son eq 0">
-                        <li><a href="#" onclick="menu_click('{$vo.fun_addr}')"><i class="{$vo.icon}"></i> <span>{$vo.fun_name}</span></a></li>
+                        <li><a href="#" onclick="menu_click('{$vo.fun_name}','{$vo.fun_addr}')"><i class="{$vo.icon}"></i> <span>{$vo.fun_name}</span></a></li>
                     </if>
                     <if condition="$vo.has_son eq 1">
                         <li class="treeview">
-                            <a href="#" onclick="menu_click('{$vo.fun_addr}')"><i class="{$vo.icon}"></i> <span>{$vo.fun_name}</span>
+                            <a href="#" onclick="menu_click('{$vo.fun_name}','{$vo.fun_addr}')"><i class="{$vo.icon}"></i> <span>{$vo.fun_name}</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -41,7 +41,7 @@
                             <ul class="treeview-menu">
                                 <foreach name="menus" item="it">
                                     <eq name="it.parent" value="$vo.id">
-                                        <li><a href="#" onclick="menu_click('{$it.fun_addr}')"><i class="{$it.icon}"></i> <span>{$it.fun_name}</span></a></li>
+                                        <li><a href="#" onclick="menu_click('{$it.fun_name}','{$it.fun_addr}')"><i class="{$it.icon}"></i> <span>{$it.fun_name}</span></a></li>
                                     </eq>
                                 </foreach>
                             </ul>

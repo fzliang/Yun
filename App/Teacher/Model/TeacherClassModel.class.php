@@ -1,5 +1,4 @@
 <?php
-
 namespace Teacher\Model;
 use Think\Model\RelationModel;
 
@@ -13,11 +12,10 @@ class TeacherClassModel extends RelationModel {
 			'mapping_fields' => 'class_name',
 			'as_fields' => 'class_name',
 			),
-
 		);
 
-	public function getClass($id) {
-		$class = $this->where('teacher_id = ' + $id)->relation('Class')->select();
+	public function getClass($teacher_id) {
+		$class = $this->where('teacher_id = ' + $teacher_id)->relation('Class')->select();
 		return $class;
 	}
 

@@ -11,7 +11,7 @@
                 <center>结束时间</center>
             </td>
             <td class="hidden-sm hidden-xs">
-                <center>创建时间</center>
+                <center>修改时间</center>
             </td>
             <td colspan="4">
                 <center>操作</center>
@@ -28,7 +28,7 @@
                     <center><?php echo (substr($vo["end_time"],0,10)); ?></center>
                 </td>
                 <td class="hidden-sm hidden-xs">
-                    <center><?php echo (substr($vo["create_time"],0,10)); ?></center>
+                    <center><?php echo (substr($vo["update_time"],0,10)); ?></center>
                 </td>
                 <td>
                     <center><a data-toggle="modal" href="#delete">结束提交</a></center>

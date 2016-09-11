@@ -1,29 +1,13 @@
 <script type="text/javascript">
 $(function() {
-    $.post("__APP__/Teacher/Work/selectClass", {
-        id: {
-            $uid
-        }
-    }, function(data, textStatus) {
+    $.post("__APP__/Teacher/Work/selectClass", {}, function(data, textStatus) {
         $('#selectClass').html(data);
     });
+    
+    $.post("__APP__/Teacher/Work/selectLesson", {}, function(data, textStatus) {
+        $('#selectLesson').html(data);
+    });
 }());
-
-function menu_click(addr) {
-    $('.breadcrumb').children('').remove();
-    url = "__APP__/Teacher/" + addr;
-    $.get(url, function(data, textStatus, xhr) {
-        $('.content').html(data);
-    });
-}
-
-function folder_click(name, addr) {
-    url = "__APP__/Teacher/" + addr;
-    $.get(url, function(data, textStatus, xhr) {
-        $('.content').html(data);
-    });
-    breadcrumb(name, addr);
-}
 
 function breadcrumb(name, addr) {
     $('.breadcrumb').append(function() {
@@ -41,6 +25,20 @@ function clickbread(addr) {
     addr1 = "folder" + addr.slice(20);
     $('#' + addr1).parent().nextAll().remove();
 }
+
+function folder_click(name, addr) {
+    url = "__APP__/Teacher/" + addr;
+    $.get(url, function(data, textStatus, xhr) {
+        $('.content').html(data);
+    });
+    breadcrumb(name, addr);
+}
+
+function menu_click(name, addr) {
+    $('.breadcrumb').children('').remove();
+    folder_click(name, addr);
+}
+
 
 function upload_file(id) {
     file = $("#file" + id).get(0).files[0];
@@ -90,7 +88,6 @@ function upload_file(id) {
 }
 
 var id = 0;
-
 function upload() {
     id++;
     var file = "<input type='file' id='file" + id + "'/>";
@@ -101,7 +98,6 @@ function upload() {
 }
 
 var task = 0;
-
 function uploadFile(id) {
     task++;
     $('#upload').modal('hide');
@@ -109,7 +105,6 @@ function uploadFile(id) {
         upload_file(id, task);
     }, 50);
 }
-
 
 function new_work() {
     $('#new_work ').modal('show');
@@ -120,9 +115,9 @@ $('#create_work').click(function() {
 
     var date = {
         'workname': $("input[name='work_name']").val(),
-        'lessonname': $("input[name='lesson_name']").val(),
+        'lesson': $("select[name='lesson']").val(),
         'class': $("select[name='class']").val(),
-        'create_time': $("input[name='create_time']").val(),
+        'start_time': $("input[name='start_time']").val(),
         'end_time': $("input[name='end_time']").val()
     }
 
