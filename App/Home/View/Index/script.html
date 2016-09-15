@@ -80,23 +80,25 @@
     }
 
     var id = 0;
-
     function upload() {
         id++;
         var file = "<input type='file' id='file" + id + "'/>";
-        var button = "<input type='button' value='上传图片' onclick='uploadFile(" + id + ")' />"
+        var button = "<input type='button' value='上传文件' onclick='uploadFile(" + id + ")' />"
         $('.upload.modal-body').html(file + button);
         $('#upload').modal('show');
-
     }
 
     var task = 0;
-
     function uploadFile(id) {
         task++;
         $('#upload').modal('hide');
         setTimeout(function() {
             upload_file(id, task);
         }, 1000);
+    }
+
+
+    function upload_work() {
+        $('#upload_work').modal('show');
     }
 </script>

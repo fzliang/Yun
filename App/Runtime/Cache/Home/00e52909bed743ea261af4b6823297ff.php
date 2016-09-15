@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/YunPan/Public/AdminLTE/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="/YunPan/Public/AdminLTE/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/YunPan/Public/AdminLTE/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="/YunPan/Public/bootstrap-select/dist/css/bootstrap-select.min.css">
     <script src="/YunPan/Public/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
 </head>
 
@@ -222,7 +223,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <button class="btn btn-success" onclick="upload()">上传文件</button>
-        <button class="btn btn-info">上传作业</button>
+        <button class="btn btn-info" onclick="upload_work()">上传作业</button>
     </section>
     <ol class="breadcrumb">
     </ol>
@@ -241,7 +242,45 @@
                 <h9>上传文件</h9>
             </div>
             <div class="upload modal-body">
-                <p>想找回密码是吧?然而这并没有什么卵用,忘记密码的话请联系工作人员</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="upload_work" class="modal fade">
+    <div class="upload modal-dialog">
+        <div class="upload modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h9>上传作业</h9>
+            </div>
+            <div class="upload_work modal-body">
+                <form method="get" accept-charset="utf-8">
+                    <p>
+                        <span>教师：</span>
+                        <div id="selectTeacher">
+                            <select class="selectpicker form-control" disabled>
+                            </select>
+                        </div>
+                    </p>
+                    <p>
+                        <span>课程名称：</span>
+                        <div id="selectLesson">
+                            <select class="selectpicker form-control" disabled>
+                            </select>
+                        </div>
+                    </p>
+                    <p>
+                        <span>作业名称：</span>
+                        <div id="selectWork">
+                            <select class="selectpicker form-control" disabled>
+                            </select>
+                        </div>
+                    </p>
+                    <p>
+                        <input class="btn btn-default" type="reset" value="重置">
+                        <input class="btn btn-primary" type="button" id="create_work" value="确认">
+                    </p>
+                </form>
             </div>
         </div>
     </div>
@@ -400,8 +439,8 @@
         
         function onprogress(evt) {
             var loaded = evt.loaded; 
-            var tot = evt.total;
-            var per = Math.floor(100 * loaded / tot);
+            var total = evt.total;
+            var per = Math.floor(100 * loaded / total);
 
             var per = per + "%";
             $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);
@@ -411,24 +450,26 @@
     }
 
     var id = 0;
-
     function upload() {
         id++;
         var file = "<input type='file' id='file" + id + "'/>";
-        var button = "<input type='button' value='上传图片' onclick='uploadFile(" + id + ")' />"
+        var button = "<input type='button' value='上传文件' onclick='uploadFile(" + id + ")' />"
         $('.upload.modal-body').html(file + button);
         $('#upload').modal('show');
-
     }
 
     var task = 0;
-
     function uploadFile(id) {
         task++;
         $('#upload').modal('hide');
         setTimeout(function() {
             upload_file(id, task);
         }, 1000);
+    }
+
+
+    function upload_work() {
+        $('#upload_work').modal('show');
     }
 </script>
 
@@ -438,6 +479,8 @@
     <script src="/YunPan/Public/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/YunPan/Public/AdminLTE/dist/js/app.min.js"></script>
+    <script src="/YunPan/Public/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="/YunPan/Public/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"></script>
 </body>
 
 </html>

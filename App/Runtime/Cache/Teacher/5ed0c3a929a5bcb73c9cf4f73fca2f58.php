@@ -1,3 +1,3 @@
-<?php if (!defined('THINK_PATH')) exit();?><select id="selectClass" class="selectpicker form-control" multiple="" data-done-button="true" data-actions-box="true" name="class">
+<?php if (!defined('THINK_PATH')) exit();?><select id="selectClass" class="selectpicker form-control" multiple data-live-search="true" data-done-button="true" data-actions-box="true" data-selected-text-format="count > 3" name="class">
     <?php if(is_array($class)): $i = 0; $__LIST__ = $class;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["class_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 </select>

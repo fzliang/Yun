@@ -3,7 +3,6 @@ namespace Home\Controller;
 
 class WorkController extends CommonController {
 	public function index() {
-		
 
 		$this->show("work");
 	}
@@ -25,5 +24,17 @@ class WorkController extends CommonController {
 
 		
 		$this->show("low_quality");
+	}
+
+	public function select_techer() {
+
+	}
+
+	public function select_lesson() {
+
+	}
+
+	public function select_work() {
+
 	}
 } 

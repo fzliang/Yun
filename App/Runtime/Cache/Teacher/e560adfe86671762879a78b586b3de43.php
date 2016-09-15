@@ -1,3 +1,3 @@
-<?php if (!defined('THINK_PATH')) exit();?><select id="selectLesson" class="selectpicker form-control" name="lesson">
+<?php if (!defined('THINK_PATH')) exit();?><select id="selectLesson" class="selectpicker form-control" data-live-search="true" name="lesson">
     <?php if(is_array($lesson)): $i = 0; $__LIST__ = $lesson;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["lesson_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 </select>

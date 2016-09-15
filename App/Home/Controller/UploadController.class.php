@@ -42,9 +42,10 @@ class UploadController extends CommonController {
 	}
 
 	public function work() {
+        $workid = I('post.work');
         $upload = new \Think\Upload();
         $upload->maxSize = 100000000000000000;
-        $upload->rootPath  =  './Uploads/';
+        $upload->rootPath  =  './Uploads/Work/';
         $upload->autoSub = true;
         $upload->subName = session('uid');
 

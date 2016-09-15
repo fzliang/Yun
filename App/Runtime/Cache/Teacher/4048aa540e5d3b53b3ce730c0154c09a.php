@@ -503,8 +503,7 @@ $('#create_work').click(function() {
     <!-- Bootstrap 3.3.6 -->
     <script src="/YunPan/Public/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="/YunPan/Public/AdminLTE/dist/js/app.min.js"></script>
-    
+    <script src="/YunPan/Public/AdminLTE/dist/js/app.min.js"></script>   
     <script src="/YunPan/Public/bootstrap-select/dist/js/bootstrap-select.js"></script>
     <script src="/YunPan/Public/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"></script>
 </body>
