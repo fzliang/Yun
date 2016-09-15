@@ -69,8 +69,8 @@
         
         function onprogress(evt) {
             var loaded = evt.loaded; 
-            var tot = evt.total;
-            var per = Math.floor(100 * loaded / tot);
+            var total = evt.total;
+            var per = Math.floor(100 * loaded / total);
 
             var per = per + "%";
             $("#task" + id + " > a > div >.progress-bar.progress-bar-aqua").css("width", per);

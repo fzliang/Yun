@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" style="width:100%">
+<?php if (!defined('THINK_PATH')) exit();?><div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" style="width:100%">
     <table class="table table-hover table-striped table-bordered">
         <tr>
             <td>
@@ -17,19 +17,21 @@
                 <center>操作</center>
             </td>
         </tr>
-        <volist name="works" id="vo">
-            <tr>
+        <?php if(is_array($works)): $i = 0; $__LIST__ = $works;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <td>
-                    <a href="#" onclick="">{$vo.work_name}</a>
+                    <a href="#" onclick=""><?php echo ($vo["work_name"]); ?></a>
                 </td>
                 <td class="hidden-xs">
-                    <center>{$vo.start_time|substr=0,10}</center>
+                    <center><?php echo (substr($vo["start_time"],0,10)); ?></center>
                 </td>
                 <td class="hidden-sm hidden-xs">
-                    <center>{$vo.end_time|substr=0,10}</center>
+                    <center><?php echo (substr($vo["end_time"],0,10)); ?></center>
                 </td>
                 <td class="hidden-sm hidden-xs">
-                    <center>{$vo.update_time|substr=0,10}</center>
+                    <center><?php echo (substr($vo["update_time"],0,10)); ?></center>
+                </td>
+                <td>
+                    <center><a data-toggle="modal" href="#delete">开始提交</a></center>
                 </td>
                 <td>
                     <center><a data-toggle="modal" href="#delete">修改</a></center>
@@ -37,7 +39,6 @@
                 <td>
                     <center><a data-toggle="modal" href="#delete">删除</a></center>
                 </td>
-            </tr>
-        </volist>
+            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
 </div>

@@ -5,7 +5,7 @@ use Think\Controller;
 class IndexController extends CommonController {
     public function index(){
     	
-    	$results = M('func')->where('level = 0 OR level = 1' )->select();
+    	$results = M('func')->where('level = 0 OR level = 2' )->select();
     	
     	$this->assign('menus',$results);
     	$this->assign('user',session('uname'));

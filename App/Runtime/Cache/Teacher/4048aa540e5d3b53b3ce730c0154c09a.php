@@ -157,7 +157,7 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="/YunPan/index.php/Home/Login/logout" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="/YunPan/index.php/Teacher/Login/logout" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
@@ -378,19 +378,6 @@ $(function() {
     });
 }());
 
-function menu_click(name, addr) {
-    $('.breadcrumb').children('').remove();
-    folder_click(name, addr);
-}
-
-function folder_click(name, addr) {
-    url = "/YunPan/index.php/Teacher/" + addr;
-    $.get(url, function(data, textStatus, xhr) {
-        $('.content').html(data);
-    });
-    breadcrumb(name, addr);
-}
-
 function breadcrumb(name, addr) {
     $('.breadcrumb').append(function() {
         addr1 = "folder" + addr.slice(20);
@@ -407,6 +394,20 @@ function clickbread(addr) {
     addr1 = "folder" + addr.slice(20);
     $('#' + addr1).parent().nextAll().remove();
 }
+
+function folder_click(name, addr) {
+    url = "/YunPan/index.php/Teacher/" + addr;
+    $.get(url, function(data, textStatus, xhr) {
+        $('.content').html(data);
+    });
+    breadcrumb(name, addr);
+}
+
+function menu_click(name, addr) {
+    $('.breadcrumb').children('').remove();
+    folder_click(name, addr);
+}
+
 
 function upload_file(id) {
     file = $("#file" + id).get(0).files[0];
@@ -456,7 +457,6 @@ function upload_file(id) {
 }
 
 var id = 0;
-
 function upload() {
     id++;
     var file = "<input type='file' id='file" + id + "'/>";
@@ -467,7 +467,6 @@ function upload() {
 }
 
 var task = 0;
-
 function uploadFile(id) {
     task++;
     $('#upload').modal('hide');
@@ -475,7 +474,6 @@ function uploadFile(id) {
         upload_file(id, task);
     }, 50);
 }
-
 
 function new_work() {
     $('#new_work ').modal('show');
@@ -506,7 +504,8 @@ $('#create_work').click(function() {
     <script src="/YunPan/Public/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/YunPan/Public/AdminLTE/dist/js/app.min.js"></script>
-    <script src="/YunPan/Public/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    
+    <script src="/YunPan/Public/bootstrap-select/dist/js/bootstrap-select.js"></script>
     <script src="/YunPan/Public/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js"></script>
 </body>
 

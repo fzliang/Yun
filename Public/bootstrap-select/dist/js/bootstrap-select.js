@@ -320,10 +320,10 @@
         (numGroup == 1) ? 'Group limit reached ({n} item max)' : 'Group limit reached ({n} items max)'
       ];
     },
-    selectAllText: 'Select All',
-    deselectAllText: 'Deselect All',
+    selectAllText: '全选',
+    deselectAllText: '取消全选',
     doneButton: false,
-    doneButtonText: 'Close',
+    doneButtonText: '关闭',
     multipleSeparator: ', ',
     styleBase: 'btn',
     style: 'btn-default',

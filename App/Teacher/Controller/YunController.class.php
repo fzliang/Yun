@@ -2,7 +2,6 @@
 namespace Teacher\Controller;
 
 class YunController extends CommonController {
-
 	public function index($parent_id = 0) {
 
 		$folders = M('file_folder')->where('user_id = %s AND parent_id = %s', session('uid'), $parent_id)->select();
@@ -21,43 +20,33 @@ class YunController extends CommonController {
 		$map['mime'] = array('like', 'image/%');
 		$map['user_id'] = array('eq', session('uid'));
 
-		$files = M('file')->where($map)->select();
-		
-		$this->assign('file', $files);
-
-		$this->display('index');
+		$this->common($map);
 	}
 
 	public function music() {
 		$map['mime'] = array('like', 'audio/%');
 		$map['user_id'] = array('eq', session('uid'));
 
-		$files = M('file')->where($map)->select();
-		
-		$this->assign('file', $files);
-
-		$this->display('index');
+		$this->common($map);
 	}
 
 	public function video() {
 		$map['mime'] = array('like', 'video/%');
 		$map['user_id'] = array('eq', session('uid'));
 
-		$files = M('file')->where($map)->select();
-
-		$this->assign('file', $files);
-
-		$this->display('index');
+		$this->common($map);
 	}
 
 	public function document() {
 		$map['mime'] = array('like', 'text/%');
 		$map['user_id'] = array('eq', session('uid'));
 
-		$files = M('file')->where($map)->select();
-		
-		$this->assign('file', $files);
+		$this->common($map);
+	}
 
+	private function common($map) {
+		$files = M('file')->where($map)->select();
+		$this->assign('file', $files);
 		$this->display('index');
 	}
 }

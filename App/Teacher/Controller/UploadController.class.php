@@ -6,7 +6,7 @@ class UploadController extends CommonController {
 		$folder = 0;
 
 		$upload = new \Think\Upload();
-    	$upload->maxSize = 100000000000000000;
+    	$upload->maxSize = 10000000;
     	$upload->rootPath  =  './Uploads/';
     	$upload->autoSub = true;
     	$upload->subName = session('uid');

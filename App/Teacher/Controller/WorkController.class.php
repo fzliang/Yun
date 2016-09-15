@@ -11,23 +11,34 @@ class WorkController extends CommonController {
 		$this->display();
 	}
 
+	public function not_start() {
+		$map['teacher_id'] = session('uid');
+		$map['status'] = 0;
 
-	public function marked() {
+		$works = M('work')->where($map)->select();
 
-
-		$this->show("marked");
+		$this->assign('works', $works);
+		$this->display();
 	}
 
-	public function marking() {
+	public function start() {
+		$map['teacher_id'] = session('uid');
+		$map['status'] = 1;
 
+		$works = M('work')->where($map)->select();
 
-		$this->show("marking");
+		$this->assign('works', $works);
+		$this->display();
 	}
 
-	public function low_quality() {
+	public function over() {
+		$map['teacher_id'] = session('uid');
+		$map['status'] = 2;
 
-		
-		$this->show("low_quality");
+		$works = M('work')->where($map)->select();
+
+		$this->assign('works', $works);
+		$this->display();
 	}
 
 	public function create() {
@@ -35,7 +46,7 @@ class WorkController extends CommonController {
 		$data['lesson_id'] = I('lesson');
 		
 		$data['start_time'] = I('start_time');
-		$data['end_time'] = I('end_time');
+		$data['end_time']   = I('end_time');
 		$data['teacher_id'] = session('uid');
 
 		$class = I('class');
@@ -49,24 +60,35 @@ class WorkController extends CommonController {
 		
 		if($data) {
 			$classes = $class;
-
+			$work_class = M('work_class');
+			
 			foreach ($classes as $class){
-				$work_class = M('work_class');
-				$work_class->workid = $data;
-				$work_class->class_id = $class;
-				$work_class = $work_class->add();
-				if (!$work_class) {
-					echo "失败";
-				}
+				$dataList[] = array("workid" => $data, "class_id" => $class);
 			}
-			echo "成功";
+
+			$result = $work_class->addAll($dataList);
+			if ($result) {
+				echo "成功";
+			} else {
+				echo "失败";
+			}
 		} else {
 			echo "失败";
 		}
 	}
 
+	public function delete() {
+		$id = I('get.id');
+
+
+	}
+
+	public function modify() {
+		$id = I('get.id');
+	}
+
 	public function selectClass() {
-		$class =D('TeacherClass')->getClass(session('uid'));
+		$class = D('TeacherClass')->getClass(session('uid'));
 		$this->assign('class',$class);
 		$this->display();
 	}

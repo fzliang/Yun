@@ -31,9 +31,6 @@
                     <center><?php echo (substr($vo["update_time"],0,10)); ?></center>
                 </td>
                 <td>
-                    <center><a data-toggle="modal" href="#delete">结束提交</a></center>
-                </td>
-                <td>
                     <center><a data-toggle="modal" href="#delete">修改</a></center>
                 </td>
                 <td>

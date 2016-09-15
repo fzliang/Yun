@@ -3,7 +3,6 @@ namespace Teacher\Model;
 use Think\Model\RelationModel;
 
 class TeacherClassModel extends RelationModel {
-
 	protected $_link = array(
 		'Class'=>array(
 			'mapping_type' => self::BELONGS_TO,
@@ -15,8 +14,8 @@ class TeacherClassModel extends RelationModel {
 		);
 
 	public function getClass($teacher_id) {
-		$class = $this->where('teacher_id = ' + $teacher_id)->relation('Class')->select();
+		$map['teacher_id'] = $teacher_id;
+		$class = $this->relation(true)->where($map)->select();
 		return $class;
 	}
-
 }

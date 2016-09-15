@@ -3,7 +3,7 @@ namespace Home\Controller;
 
 class WorkController extends CommonController {
 	public function index() {
-
+		
 
 		$this->show("work");
 	}
